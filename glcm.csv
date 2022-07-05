@@ -1,0 +1,8 @@
+"from skimage.feature import greycomatrix
+import numpy as np
+image = np.array([[0, 0, 1, 1],
+[0, 0, 1, 1],
+[0, 2, 2, 2],
+[2, 2, 3, 3]], dtype=np.uint8)
+result = greycomatrix(image, [1], [0, np.pi/4, np.pi/2, 3*np.pi/4], levels =4, symmetric=True, normed=True)#call function
+print(result)"
